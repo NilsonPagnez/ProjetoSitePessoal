@@ -25,7 +25,7 @@ function changInfo(){
 
 let valSlide = 0
 
-/* Função para de videos e suas respectivas descrições*/ 
+/* Função para de videos e suas respectivas descrições */ 
 
 function changeVideo(change){
 
