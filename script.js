@@ -5,6 +5,8 @@ const videos = document.querySelectorAll(".video")
 const descricoes = document.querySelectorAll(".DescProjeto")
 const videoButtons = document.querySelectorAll(".videoBtn")
 
+
+/* Função para mudar de abas ao clicar no NavBar*/ 
 function changInfo(){
     nav.forEach((button, index) => {
         button.classList.remove("on")
@@ -22,6 +24,8 @@ function changInfo(){
 
 
 let valSlide = 0
+
+/* Função para de videos e suas respectivas descrições*/ 
 
 function changeVideo(change){
 
