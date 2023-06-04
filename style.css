@@ -307,7 +307,7 @@ section .content .textContent p{
 
 }
 #disciplinas .textContent div:nth-child(4){
-    background-image: url(images/Gestão.jpg);
+    background-image: url(images/gestão.jpg);
     background-position: right;
     background-color: rgba(31, 33, 36, 1);
 
