@@ -1,0 +1,530 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(images/bokeh-de-luz-noturna-urbana-abstrata-fundo-defocused.jpg);
+    background-size: cover;
+
+}
+
+main{
+    display: flex;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 240);
+    max-width: 70%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    position: relative;
+    border: 2px solid rgb(240, 240, 240);
+    color: rgba(228, 228, 230);
+    -webkit-box-shadow: 0px 10px 10px 3px rgba(0,0,0,0.72);
+    -moz-box-shadow: 0px 10px 10px 3px rgba(0,0,0,0.72);
+    box-shadow: 0px 10px 10px 3px rgba(0,0,0,0.72);
+}
+header{
+    background-color: rgba(31, 33, 36, 1);
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    width: 100%;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header div h1{
+    padding-top: 65px;
+    padding-bottom: 5px;
+}
+
+header div h3{
+    padding-bottom: 15px;
+}
+
+header #myFaceDiv{
+    border-radius: 100px;
+    position: absolute;
+    top: -50px;
+    overflow: hidden;
+   width: 100px;
+}
+header #myFaceDiv img{
+    height: 100px;
+
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0;
+    background-color: rgba(53, 65, 83, 0.89);
+}
+
+nav ul li{
+    cursor: pointer;
+    color: rgb(194, 194, 196);
+    transition:  0.25s ease-out;
+    position: relative;
+    display: inline-block;
+}
+nav ul li:hover{
+  
+    color: white ;
+    transition: 0.25s ease-out;
+  
+}
+nav ul .on::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(228, 228, 230, 0.89);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: whitesmoke;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+
+nav ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    
+    
+}
+
+nav ul .on{
+    color: whitesmoke!important;
+}
+
+section{
+    display: flex;
+    color: black;
+    height: 100%;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+
+section div{
+    padding: 40px;
+    width: 100%;
+    max-height: 100%;
+    
+}
+
+section .content{
+    display: flex;
+    animation: pagination 0.5s ease;
+    max-height: 100%;
+}
+
+
+section .content .textContent p{
+    margin: 10px 0;
+}
+
+.off{
+    display: none !important;
+}
+
+/* Aba Sobre Mim */
+
+#sobreMim{
+    display: flex;
+    flex-direction: column;
+}
+#sobreMim div:first-of-type{
+
+    padding: 0;
+    text-align: center;
+}
+
+#sobreMim .textContent{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around;
+    text-align: justify;
+    height: 100%;
+}
+
+
+/* Aba de Estudos */
+
+#estudos .textContent div{
+    padding: 0;
+}
+#estudos .textContent:first-of-type{
+    border-right: 1px solid rgba(53, 65, 83, 0.89);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#estudos .textContent:last-child{
+    border-left: 1px solid rgba(53, 65, 83, 0.89);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.languages{
+    display: flex;
+    flex-direction: column;
+}
+
+#estudos .languages h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#estudos .languages .allLang{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.allLang div{
+   position: relative;
+}
+.allLang div:hover img{
+   filter: brightness(35%);
+   transition: 0.3s;
+}
+.allLang div  h5{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    opacity: 0;
+    left: 50%; 
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+
+
+}
+.allLang div:hover h5{
+    opacity: 1;
+}
+
+#estudos .languages div{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+
+}
+#estudos .languages img{
+    max-width: 64px;
+    margin: 0 5px;
+}
+
+/* Aba de Disciplinas */
+
+
+#disciplinas {
+    flex-direction: column;
+}
+
+#disciplinas h2{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+#disciplinas .textContent{
+    padding: 0 ;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;    
+    grid-template-rows: 50% 50%;
+    height: 100%;
+    align-items: center;
+    
+}
+#disciplinas .textContent div{
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    transition: 0.2s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.5);
+    
+}
+#disciplinas .textContent div h4{
+    width: 100%;
+}
+
+#disciplinas .textContent div:hover{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+
+}
+#disciplinas .textContent div:nth-child(2){
+    background-image: url(images/Requisitos.jpg);
+    background-color: rgba(31, 33, 36, 1);
+    background-position: center;
+
+}
+#disciplinas .textContent div:nth-child(3){
+    background-image: url(images/Ética.jpg);
+    background-color: rgba(31, 33, 36, 1);
+    background-position: center;
+
+}
+#disciplinas .textContent div:nth-child(4){
+    background-image: url(images/Gestão.jpg);
+    background-position: right;
+    background-color: rgba(31, 33, 36, 1);
+
+}
+#disciplinas .textContent div:nth-child(5){
+    background-image: url(images/web.jpg);
+    background-position: right;
+    background-color: rgba(31, 33, 36, 1);
+}
+#disciplinas .textContent div:nth-child(6){
+    background-image: url(images/prodTextual.jpg);
+    background-color: rgba(31, 33, 36, 1);
+}
+#disciplinas .textContent div:nth-child(7){
+    background-image: url(images/algoritmo.jpg);
+    background-color: rgba(31, 33, 36, 1);
+    background-position: center;
+
+}
+
+.grid1{
+    background-image: url(images/praticas.png);
+    background-color: rgba(31, 33, 36, 1);
+    background-position:  10%;
+    grid-row-end: span 2;
+    width: 100%!important;
+    height: 95%!important;
+    z-index: 10;
+}
+
+.grid1:hover{
+    background-position:  center;
+
+    width: 200%!important;
+    height: 100%!important
+}
+
+.filterDiv{
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,0) 100%);
+    color: whitesmoke;
+    margin: 0!important;
+    width: 100%!important;
+    padding: 8px!important;
+}
+/* Aba de Projetos */
+
+#projetos .video{
+    display: none;
+    width: 50%;
+    position: relative;
+}
+
+
+#projetos .video .languages{
+    width: 100%;
+    height: 98%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,0) 100%);
+    position: absolute;
+    padding: 0;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: whitesmoke;
+    opacity: 0;
+}
+
+#projetos .video .languages .allLang{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#projetos .allLang div img{
+    max-width: 34px;
+    margin: 0 5px;
+}
+
+
+#projetos .video .languages{
+    width: 100%;
+    height: 99%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,0) 100%);
+    position: absolute;
+    padding: 0;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: whitesmoke;
+    opacity: 0;
+}
+#projetos .video:hover .languages{
+    opacity: 1;
+}
+#projetos video{
+    animation: pagination 0.5s ease;
+    width: 100%;
+
+}
+#projetos .DescProjeto{
+    text-align: center;
+    display: none;
+    animation: pagination 0.5s ease;
+
+}
+#projetos .on{
+    display: block;
+}
+
+#projetos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#projetos div{
+    width: fit-content;
+    padding: 0;
+}
+
+#projetos .videoDiv{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+/* Setas para mudar de slide  */
+
+.videoBtn{
+    font-size: 200%!important;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+}
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contato form{
+    height: 100%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+#contato form h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contato form .inputBox, .inputSelectBox{
+    padding: 0 0 10px 0;
+}
+
+.inputSelectBox{
+    display: flex;
+    gap: 15px;
+}
+
+
+
+#contato form .inputSelectBox div{
+   padding: 0;
+}
+#contato form input, #contato form  select{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background-color: rgb(53, 65, 83);
+    border: none;
+    color:  rgba(228, 228, 230);
+}
+ #contato form textarea{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    height: 100%;
+    margin: 0 0 10px 0;
+    resize: none;
+    background-color:rgba(53, 65, 83, 1);
+    border: none; 
+    color:  rgba(228, 228, 230);
+
+}
+
+#contato form button{
+    background-color: rgba(31, 33, 36, 1);
+    color:  rgba(228, 228, 230);
+    padding: 10px 0;
+    margin: auto 40%;
+    border: none;
+    cursor: pointer;
+}
+#contato form button:hover{
+    background-color:  rgb(62, 62, 63);
+}
+
+
+@keyframes pagination {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
